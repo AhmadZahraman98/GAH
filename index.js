@@ -6,6 +6,10 @@ const PORT = process.env.PORT || 3030;
 app.get('/', (req, res) => {
     res.send('Hi All');
 })
+app.get('/data', (req, res) => {
+    var data = ['Ali Beik', 'Georgio', 'Ahmad', 'Rym']
+    res.send(data);
+})
 app.listen(PORT, () => {
     console.log(`server started on port ${PORT}`);
 });
